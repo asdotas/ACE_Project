@@ -1,0 +1,157 @@
+﻿TO DO      作業中項目
+
+newnewnewnewnewnewnewnewnewnewnewnewnewnewnewnewnewnewnewnewnewnewnewnewnewnewnewnewnewnewnewnewnewnewnewnewnewnewnewnewnewnewnew
+未可決 重要
+
+now
+プリントアウトの画質向上
+
+受付済の先頭移動
+
+初期のユーザー登録
+
+できれば、アクセスはパイソンでｈｔｍｌ形式でこのアプリから作成させる
+
+最初のCSVのテンプレート
+
+〇　フォルダのファイルを全部削除する
+〇　受付から全部の会場にメッセージ
+〇　チャット？
+〇　独立したアイコン閲覧ソフト
+
+newnewnewnewnewnewnewnewnewnewnewnewnewnewnewnewnewnewnewnewnewnewnewnewnewnewnewnewnewnewnewnewnewnewnewnewnewnewnewnewnewnewnew
+nextnextnextnextnextnextnextnextnextnextnextnextnextnextnextnextnextnextnextnextnextnextnextnextnextnextnextnextnextnextnextnext
+未解決　後回し
+
+-----------------------------------------------------------------------------
+private void updateBtn_Click(object sender, EventArgs e)
+{
+    if(dgv1.Rows[0].Cells[18].Value != null)  もっといい条件がないのか？
+    ShowIconUpdate();
+}
+-----------------------------------------------------------------------------
+
+
+ラベルパスの表示をreaddatasを使わない方法
+　データグリッドから無理か？
+
+nextnextnextnextnextnextnextnextnextnextnextnextnextnextnextnextnextnextnextnextnextnextnextnextnextnextnextnextnextnextnextnext
+mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
+◎　マニュアル
+
+初期の設定
+スプレッドシートでデータを作る
+ファイルを読み込む
+それぞれの
+
+
+mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+endendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendend
+◎　DONE 完了項目
+
+
+howIconText()の同一ファイルを検査して("win持込"　"mac持込"等)、一致ならデータグリッドビューにエラー表示
+申送り変更の変化の更新が遅い
+全てオープンファイルダイアログに変更させる
+BinaryStreamCsv
+
+プリントアウト機能
+
+検索・フィルター処理
+
+ログ作成
+
+
+form 565
+データの並び替え
+
+
+form1 611
+受付済の色を変える
+
+セッションボタンを押したあとのフィルター処理のために
+tabradioボタンを押した後に発動するCSVファイルを作る
+メゾットを作成中
+form1
+SaveNowDgvDefaultCsv()
+
+checkdeskformを開けるとアイコン情報を更新する
+	①checkdeskform　の　GetDgvHeaderLblArray()で、｛持込　音声あり　動画あり　申送あり　修正あり　発表者　演台持上　PowerPoint｝
+	　の配列を作る。
+	②一人目の演者のフォルダのファイルリストに、”持込”を含むファイルがあれば、dgv[18]にそのファイル名を表示する。
+		持込　		dgv[18]
+		音声あり　	dgv[19]
+		動画あり　	dgv[20]
+		申送あり　	dgv[21]
+		修正あり　	dgv[22]
+		発表者　		dgv[23]
+		演台持上　	dgv[24]
+		PowerPoint	dgv[25]
+	③以下同様に演者の数だけ繰り返す。
+
+
+！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！
+進行中
+アイコンの更新時のデータグリッドビューのアイコンだけクリアしたい。
+
+！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！
+
+アイコン情報のデータグリッドビューのメインとサブの切り替え
+
+セッションボタンでフィルターを作成中だが、以下のエラーが判明したため、デバッグ中
+１、データグリッドビュをダブルクリックしてspinfoformを表示させた時、なぜか第一会場、第二会場・・・第六会場
+　　ともに、一番上のアイテムが同じ人になる
+    〇解決　
+    　データグリッドの選択されている行をダブルクリックした時に配列化するときに、selectRow[0].indexになっていた。
+    　int.parse(currentRow.cells[0].value.tostring())に変更してセル[0]の通し番号からインデックスを取得
+２、申送り　remarks が第一会場のsponfoformのテキストバックスのテキストが、別会場にも反映される。
+     〇解決
+     上記を解消すると正常になった
+-----------------------------------------------------------------------
+申送りの表示
+spinfoform 52
+            //申送りの表示
+            var remarksFilePath = array[16] + "/_remarks.txt";
+            if (File.Exists(remarksFilePath))
+            {
+                var txt = File.ReadAllText(remarksFilePath);
+                f.textBoxRemarks.Text = txt;
+            }
+            else
+            {
+                f.textBoxRemarks.Text = array[15];
+            }
+dgv 362
+            ////申送りremarksの表示
+            var remarksFilePath = listdata.Open1 + "/_remarks.txt";
+            if (File.Exists(remarksFilePath))
+            {
+                var txt = File.ReadAllText(remarksFilePath);
+                dgv1.Rows[r].Cells[6].Value = txt;
+            }
+            else
+            {
+                dgv1.Rows[r].Cells[6].Value = listdata.Remarks;
+            }
+-----------------------------------------------------------------------
+endendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendend

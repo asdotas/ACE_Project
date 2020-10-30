@@ -71,21 +71,20 @@ namespace ACE_Project
                 }
                 else
                 {
-                    //System.IO.File.Copy(ofd1.FileName, @"./temp/temp.csv", true);
                     //チュートリアルのＣＳＶファイルを開くボタンの動作
                     ofd1 = GetOpenFileDialog("*.csv", "Csvファイル(*.csv;)|*.csv|すべてのファイル(*.*)|*.*");
-                    //ダイアログを表示する
+                    ////ダイアログを表示する
                     if (ofd1.ShowDialog() == DialogResult.OK)
                     {
                         speakers = new ReadDatas(ofd1.FileName);
-                        //Application.Run(new CheckDeskForm(ofd1));
+                        Application.Run(new CheckDeskForm(ofd1));
                     }
                     else
                     {
                         Application.Exit();
                         Environment.Exit(0);
                     }
-
+                    
                 }
             }
         }

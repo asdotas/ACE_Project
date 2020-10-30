@@ -141,7 +141,7 @@
             this.CsvOpenMkdirBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CsvOpenMkdirBtn.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CsvOpenMkdirBtn.ForeColor = System.Drawing.Color.LightGray;
-            this.CsvOpenMkdirBtn.Location = new System.Drawing.Point(436, 151);
+            this.CsvOpenMkdirBtn.Location = new System.Drawing.Point(436, 144);
             this.CsvOpenMkdirBtn.Name = "CsvOpenMkdirBtn";
             this.CsvOpenMkdirBtn.Size = new System.Drawing.Size(187, 48);
             this.CsvOpenMkdirBtn.TabIndex = 12;
@@ -158,7 +158,7 @@
             this.NewDataBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.NewDataBtn.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NewDataBtn.ForeColor = System.Drawing.Color.LightGray;
-            this.NewDataBtn.Location = new System.Drawing.Point(436, 217);
+            this.NewDataBtn.Location = new System.Drawing.Point(436, 211);
             this.NewDataBtn.Name = "NewDataBtn";
             this.NewDataBtn.Size = new System.Drawing.Size(187, 48);
             this.NewDataBtn.TabIndex = 13;
@@ -175,11 +175,11 @@
             this.CsvOpenBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CsvOpenBtn.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CsvOpenBtn.ForeColor = System.Drawing.Color.LightGray;
-            this.CsvOpenBtn.Location = new System.Drawing.Point(436, 85);
+            this.CsvOpenBtn.Location = new System.Drawing.Point(436, 77);
             this.CsvOpenBtn.Name = "CsvOpenBtn";
             this.CsvOpenBtn.Size = new System.Drawing.Size(187, 48);
             this.CsvOpenBtn.TabIndex = 14;
-            this.CsvOpenBtn.Text = "ファイルを開く";
+            this.CsvOpenBtn.Text = "ＣＳＶファイルを開く";
             this.CsvOpenBtn.UseVisualStyleBackColor = false;
             this.CsvOpenBtn.Click += new System.EventHandler(this.CsvOpenBtn_Click_1);
             // 

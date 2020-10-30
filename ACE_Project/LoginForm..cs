@@ -140,28 +140,5 @@ namespace ACE_Project
             }
 
         }
-
-        private void btnSub_Click(object sender, EventArgs e)
-        {
-            //シリアル読み込み
-            NewUser n;
-            var personalPath = Path.Combine(System.Environment.GetFolderPath(Environment.SpecialFolder.Personal), "key.aed");
-            if (File.Exists(personalPath))
-            {
-                n = (NewUser)BinaryStream.LoadFromBinaryFile(personalPath);
-                if (txtuser.Text == n.NewUserName && txtpass.Text == n.NewPassword)
-                {
-                    this.DialogResult = DialogResult.OK;
-                }
-                else
-                {
-                    MessageBox.Show("ユーザー名あるいはパスワードが違います");
-                }
-            }
-            else
-            {
-                MessageBox.Show("まだユーザー登録できていません。");
-            }
-        }
     }
 }

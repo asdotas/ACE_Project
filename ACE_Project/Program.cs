@@ -36,6 +36,7 @@ namespace ACE_Project
                     ////ダイアログを表示する
                     if (ofd1.ShowDialog() == DialogResult.OK)
                     {
+                        //
                         speakers = new ReadDatas(ofd1.FileName);
                         f6.Dispose();
                     }

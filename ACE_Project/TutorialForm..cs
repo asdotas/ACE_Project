@@ -96,22 +96,8 @@ namespace ACE_Project
 
         private void CsvOpenBtn_Click_1(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("最初に「フォルダを作成して開く」でフォルダが作成されていない状態でこちらを起動すると、正常に動作いたしませんのでご注意ください。",
-                                                    "質問",
-                                                    MessageBoxButtons.YesNo,
-                                                    MessageBoxIcon.Exclamation,
-                                                    MessageBoxDefaultButton.Button2);
-            if ( result == DialogResult.Yes)
-            {
-                isNextForm = false;
-                this.DialogResult = DialogResult.No;
-            }
-            else if (result == DialogResult.No)
-            {
-                Application.Exit();
-                Environment.Exit(0);
-            }
-
+            isNextForm = true;
+            this.DialogResult = DialogResult.No;
         }
     }
 }

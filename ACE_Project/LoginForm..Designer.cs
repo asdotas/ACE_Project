@@ -42,6 +42,7 @@
             this.lblclose = new System.Windows.Forms.Label();
             this.lblmini = new System.Windows.Forms.Label();
             this.btnnewuser = new System.Windows.Forms.Button();
+            this.btnSub = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
@@ -196,13 +197,30 @@
             this.btnnewuser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnnewuser.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnnewuser.ForeColor = System.Drawing.Color.LightGray;
-            this.btnnewuser.Location = new System.Drawing.Point(630, 258);
+            this.btnnewuser.Location = new System.Drawing.Point(618, 258);
             this.btnnewuser.Name = "btnnewuser";
-            this.btnnewuser.Size = new System.Drawing.Size(85, 26);
+            this.btnnewuser.Size = new System.Drawing.Size(95, 26);
             this.btnnewuser.TabIndex = 13;
             this.btnnewuser.Text = "New User";
             this.btnnewuser.UseVisualStyleBackColor = false;
             this.btnnewuser.Click += new System.EventHandler(this.btnnewuser_Click);
+            // 
+            // btnSub
+            // 
+            this.btnSub.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.btnSub.FlatAppearance.BorderSize = 0;
+            this.btnSub.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(28)))), ((int)(((byte)(28)))));
+            this.btnSub.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnSub.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSub.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSub.ForeColor = System.Drawing.Color.LightGray;
+            this.btnSub.Location = new System.Drawing.Point(502, 258);
+            this.btnSub.Name = "btnSub";
+            this.btnSub.Size = new System.Drawing.Size(95, 26);
+            this.btnSub.TabIndex = 14;
+            this.btnSub.Text = "Sub Sign IN";
+            this.btnSub.UseVisualStyleBackColor = false;
+            this.btnSub.Click += new System.EventHandler(this.btnSub_Click);
             // 
             // Form5
             // 
@@ -210,6 +228,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.ClientSize = new System.Drawing.Size(780, 330);
+            this.Controls.Add(this.btnSub);
             this.Controls.Add(this.btnnewuser);
             this.Controls.Add(this.lblmini);
             this.Controls.Add(this.lblclose);
@@ -250,5 +269,6 @@
         private System.Windows.Forms.Label lblmini;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnnewuser;
+        private System.Windows.Forms.Button btnSub;
     }
 }
